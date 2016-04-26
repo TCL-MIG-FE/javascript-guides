@@ -10,7 +10,7 @@
         }
     },
     "plugins": [
-       
+       "tbfed-pagefooter"
     ],
     "pluginsConfig": {
         "disqus": {
