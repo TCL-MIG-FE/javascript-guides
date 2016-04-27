@@ -10,11 +10,14 @@
         }
     },
     "plugins": [
-       "tbfed-pagefooter"
+       "tbfed-pagefooter",
+        "include-codeblock",
+        "duoshuo"
     ],
     "pluginsConfig": {
-        "disqus": {
-            "shortName": "tcl-mig-fe-javascript-guides"
+        "duoshuo": {
+            "short_name": "tcl-mig-fe-javascript",
+            "theme": "default"
         },
         "github": {
             "url": "https://github.com/TCL-MIG-FE/javascript-guides"
