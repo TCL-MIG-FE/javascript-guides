@@ -1,0 +1,542 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>类型 | MIG前端Javascript开发规范</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.5.1">
+        <meta name="author" content="flyingzl">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="../styles/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../basic/object.html" />
+    
+    
+    <link rel="prev" href="../basic.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="1.1" data-chapter-title="类型" data-filepath="basic/types.md" data-basepath=".." data-revision="Wed Apr 27 2016 16:33:00 GMT+0800 (中国标准时间)">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+                
+                <li>
+                    <a href="https://github.com/TCL-MIG-FE/javascript-guides" target="blank" class="custom-link">Home</a>
+                </li>
+            
+            
+
+            
+            <li class="divider"></li>
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        关于本文档
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="basic.html">
+            
+                
+                    <a href="../basic.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        基本数据类型
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.1" data-path="basic/types.html">
+            
+                
+                    <a href="../basic/types.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        类型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basic/object.html">
+            
+                
+                    <a href="../basic/object.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        对象
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="basic/array.html">
+            
+                
+                    <a href="../basic/array.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        数组
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="basic/string.html">
+            
+                
+                    <a href="../basic/string.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        字符串
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="basic/function.html">
+            
+                
+                    <a href="../basic/function.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        函数
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="grammar.html">
+            
+                
+                    <a href="../grammar.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        语法相关
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="grammar/vars.html">
+            
+                
+                    <a href="../grammar/vars.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        变量
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="grammar/properties.html">
+            
+                
+                    <a href="../grammar/properties.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        属性访问
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="grammar/hoisting.html">
+            
+                
+                    <a href="../grammar/hoisting.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        变量提升
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="grammar/compare.html">
+            
+                
+                    <a href="../grammar/compare.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        比较运算符 &amp; 等号
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="grammar/block.html">
+            
+                
+                    <a href="../grammar/block.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        代码块
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="grammar/comment.html">
+            
+                
+                    <a href="../grammar/comment.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        注释
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="grammar/blank.html">
+            
+                
+                    <a href="../grammar/blank.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        空格
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="grammar/comma.html">
+            
+                
+                    <a href="../grammar/comma.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        逗号 &amp; 分号
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="misc.html">
+            
+            <span><b>3.</b> 其他</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="misc/convertion.html">
+            
+            <span><b>3.1.</b> 类型转换</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="misc/rule.html">
+            
+            <span><b>3.2.</b> 命名规则</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="msic/get-set.html">
+            
+            <span><b>3.3.</b> 存储器</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="constructor.html">
+            
+            <span><b>3.4.</b> 构造函数</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="misc/events.html">
+            
+            <span><b>3.5.</b> 事件</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="misc/module.html">
+            
+            <span><b>3.6.</b> 模块</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="misc/jquery.html">
+            
+            <span><b>3.7.</b> jQuery</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本書使用 GitBook 釋出
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >MIG前端Javascript开发规范</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x7C7B;&#x578B;">&#x7C7B;&#x578B;</h1>
+<ul>
+<li><p><strong>&#x539F;&#x59CB;&#x503C;</strong>: &#x5B58;&#x53D6;&#x76F4;&#x63A5;&#x4F5C;&#x7528;&#x4E8E;&#x5B83;&#x81EA;&#x8EAB;&#x3002;</p>
+<ul>
+<li><code>string</code></li>
+<li><code>number</code></li>
+<li><code>boolean</code></li>
+<li><code>null</code></li>
+<li><p><code>undefined</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> foo = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">let</span> bar = foo;
+
+bar = <span class="hljs-number">9</span>;
+
+<span class="hljs-built_in">console</span>.log(foo, bar); <span class="hljs-comment">// =&gt; 1, 9</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x590D;&#x6742;&#x7C7B;&#x578B;</strong>: &#x5B58;&#x53D6;&#x65F6;&#x4F5C;&#x7528;&#x4E8E;&#x5B83;&#x81EA;&#x8EAB;&#x503C;&#x7684;&#x5F15;&#x7528;&#x3002;</p>
+<ul>
+<li><code>object</code></li>
+<li><code>array</code></li>
+<li><p><code>function</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> foo = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>];
+<span class="hljs-keyword">let</span> bar = foo;
+
+bar[<span class="hljs-number">0</span>] = <span class="hljs-number">9</span>;
+
+<span class="hljs-built_in">console</span>.log(foo[<span class="hljs-number">0</span>], bar[<span class="hljs-number">0</span>]); <span class="hljs-comment">// =&gt; 9, 9</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x5224;&#x65AD;&#x5177;&#x4F53;&#x7C7B;&#x578B;</strong></p>
+<pre><code class="lang-javascript">  <span class="hljs-keyword">const</span> array = [];
+  <span class="hljs-keyword">const</span> nodes = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&quot;h1&quot;</span>);
+
+  <span class="hljs-keyword">const</span> getType = (v) =&gt; <span class="hljs-built_in">Object</span>.prototype.toString.call(v);
+
+  <span class="hljs-built_in">console</span>.log(getType(array)) <span class="hljs-comment">// =&gt; &quot;[object Array]&quot;</span>
+
+  <span class="hljs-built_in">console</span>.log(getType(nodes)) <span class="hljs-comment">// =&gt; &quot;[object NodeList]&quot;</span>
+
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span>(nodes)) <span class="hljs-comment">// =&gt; &quot;object&quot;</span>
+</code></pre>
+<p>  <strong>&#x6CE8;&#x610F;</strong>&#xFF1A; &#x901A;&#x8FC7;<code>typeof</code>&#x4E5F;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x4F46;&#x4E0D;&#x662F;&#x592A;&#x51C6;&#x786E;&#xFF0C;&#x914C;&#x60C5;&#x4F7F;&#x7528;</p>
+</li>
+</ul>
+<ul>
+<li><p>null vs undefined</p>
+<p>  <code>null</code>&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;<code>undefined</code>&#x662F;<code>window</code>&#x7684;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x3002;</p>
+<pre><code class="lang-javascript">  <span class="hljs-keyword">typeof</span>(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; &quot;object&quot;</span>
+  <span class="hljs-keyword">typeof</span>(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// =&gt; &quot;undefined&quot;</span>
+
+  <span class="hljs-keyword">const</span> getType = (v) =&gt; <span class="hljs-built_in">Object</span>.prototype.toString.call(v);
+
+  getType(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; &quot;[object Null]&quot;</span>
+  getType(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// =&gt; &quot;[object undefined]&quot;</span>
+
+  <span class="hljs-built_in">console</span>.log( <span class="hljs-literal">null</span> == <span class="hljs-literal">undefined</span> ) <span class="hljs-comment">// =&gt; true</span>
+  <span class="hljs-built_in">console</span>.log( <span class="hljs-literal">null</span> === <span class="hljs-literal">undefined</span> ) <span class="hljs-comment">// =&gt; true</span>
+</code></pre>
+</li>
+</ul>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; TCL 2016 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2016-04-27 14:33:18
+</span></footer>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../basic.html" class="navigation navigation-prev " aria-label="Previous page: 基本数据类型"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../basic/object.html" class="navigation navigation-next " aria-label="Next page: 对象"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-duoshuo/duoshuo.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"duoshuo":{"short_name":"tcl-mig-fe-javascript","theme":"default"},"github":{"url":"https://github.com/TCL-MIG-FE/javascript-guides"},"sharing":{"weibo":true,"facebook":true,"twitter":true,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"tbfed-pagefooter":{"copyright":"Copyright &copy TCL 2016","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"include-codeblock":{},"highlight":{},"search":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
