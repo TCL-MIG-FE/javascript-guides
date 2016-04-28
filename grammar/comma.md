@@ -54,4 +54,4 @@ const hero = {
   const name = 'Skywalker';
   return name;
 })();
-```javascript
+```
