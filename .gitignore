@@ -1,0 +1,11 @@
+
+#gitbook output
+_book
+
+#npm modules
+node_modules
+
+.idea
+
+
+
