@@ -2,7 +2,7 @@
 
 - 当你必须使用函数表达式（或传递一个匿名函数）时，使用箭头函数符号。
 
-箭头函数会创造一个新的`this`执行环境（参考[Arrow Functions -MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)），同时会是代码更简洁。
+箭头函数会创造一个新的`this`执行环境（参考[Arrow Functions -MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)），同时会使代码更简洁。
 
 ```javascript
 
