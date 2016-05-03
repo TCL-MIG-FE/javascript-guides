@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>解构 | MIG前端Javascript开发规范</title>
+        <title>迭代器 | MIG前端Javascript开发规范</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.1">
@@ -43,10 +43,10 @@
         
     
     
-    <link rel="next" href="../misc.html" />
+    <link rel="next" href="../es6/destruct.html" />
     
     
-    <link rel="prev" href="../es6/iterator.html" />
+    <link rel="prev" href="../es6/module.html" />
     
 
         
@@ -54,7 +54,7 @@
     <body>
         
         
-    <div class="book" data-level="3.5" data-chapter-title="解构" data-filepath="es6/destruct.md" data-basepath=".." data-revision="Tue May 03 2016 15:10:47 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="3.4" data-chapter-title="迭代器" data-filepath="es6/iterator.md" data-basepath=".." data-revision="Tue May 03 2016 15:10:47 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -387,7 +387,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="es6/iterator.html">
+        <li class="chapter active" data-level="3.4" data-path="es6/iterator.html">
             
                 
                     <a href="../es6/iterator.html">
@@ -402,7 +402,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.5" data-path="es6/destruct.html">
+        <li class="chapter " data-level="3.5" data-path="es6/destruct.html">
             
                 
                     <a href="../es6/destruct.html">
@@ -551,67 +551,31 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="&#x89E3;&#x6784;">&#x89E3;&#x6784;</h1>
+                        <h1 id="&#x8FED;&#x4EE3;&#x5668;">&#x8FED;&#x4EE3;&#x5668;</h1>
 <ul>
-<li>&#x4F7F;&#x7528;&#x89E3;&#x6784;&#x5B58;&#x53D6;&#x591A;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#x3002;</li>
+<li>&#x4F7F;&#x7528;&#x9AD8;&#x9636;&#x51FD;&#x6570;&#x4F8B;&#x5982;<code>map()</code>&#x548C; <code>reduce()</code>&#x66FF;&#x4EE3; <code>for-of</code></li>
 </ul>
-<pre><code class="lang-javascript"><span class="hljs-comment">// bad</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getFullName</span>(<span class="hljs-params">user</span>) </span>{
-    <span class="hljs-keyword">const</span> firstName = user.firstName;
-    <span class="hljs-keyword">const</span> lastName = user.lastName;
-
-    <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${firstName}</span> <span class="hljs-subst">${lastName}</span>`</span>;
-}
-
-<span class="hljs-comment">// good</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getFullName</span>(<span class="hljs-params">obj</span>) </span>{
-    <span class="hljs-keyword">const</span> { firstName, lastName } = obj;
-    <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${firstName}</span> <span class="hljs-subst">${lastName}</span>`</span>;
-}
-
-<span class="hljs-comment">// best</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getFullName</span>(<span class="hljs-params">{ firstName, lastName }</span>) </span>{
-    <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${firstName}</span> <span class="hljs-subst">${lastName}</span>`</span>;
-}
-</code></pre>
-<ul>
-<li>&#x5BF9;&#x6570;&#x7EC4;&#x4F7F;&#x7528;&#x89E3;&#x6784;&#x8D4B;&#x503C;&#x3002;</li>
-</ul>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
 
 <span class="hljs-comment">// bad</span>
-<span class="hljs-keyword">const</span> first = arr[<span class="hljs-number">0</span>];
-<span class="hljs-keyword">const</span> second = arr[<span class="hljs-number">1</span>];
-
-<span class="hljs-comment">// good</span>
-<span class="hljs-keyword">const</span> [first, second] = arr;
-</code></pre>
-<ul>
-<li>&#x9700;&#x8981;&#x56DE;&#x4F20;&#x591A;&#x4E2A;&#x503C;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;&#x5BF9;&#x8C61;&#x89E3;&#x6784;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6570;&#x7EC4;&#x89E3;&#x6784;&#x3002;<blockquote>
-<p>&#x4E3A;&#x4EC0;&#x4E48;&#xFF1F;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x589E;&#x52A0;&#x5C5E;&#x6027;&#x6216;&#x8005;&#x6539;&#x53D8;&#x6392;&#x5E8F;&#x65F6;&#xFF0C;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x65F6;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
-</blockquote>
-</li>
-</ul>
-<pre><code class="lang-javascript"><span class="hljs-comment">// bad</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processInput</span>(<span class="hljs-params">input</span>) </span>{
-    <span class="hljs-comment">// then a miracle occurs</span>
-    <span class="hljs-keyword">return</span> [left, right, top, bottom];
+<span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> num <span class="hljs-keyword">of</span> numbers) {
+    sum += num;
 }
 
-<span class="hljs-comment">// &#x8C03;&#x7528;&#x65F6;&#x9700;&#x8981;&#x8003;&#x8651;&#x56DE;&#x8C03;&#x6570;&#x636E;&#x7684;&#x987A;&#x5E8F;&#x3002;</span>
-<span class="hljs-keyword">const</span> [left, __, top] = processInput(input);
+sum === <span class="hljs-number">15</span>;
 
 <span class="hljs-comment">// good</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processInput</span>(<span class="hljs-params">input</span>) </span>{
-    <span class="hljs-comment">// then a miracle occurs</span>
-    <span class="hljs-keyword">return</span> { left, right, top, bottom };
-}
+<span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;
+numbers.forEach((num) =&gt; sum += num);
+sum === <span class="hljs-number">15</span>;
 
-<span class="hljs-comment">// &#x8C03;&#x7528;&#x65F6;&#x53EA;&#x9009;&#x62E9;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E;</span>
-<span class="hljs-keyword">const</span> { left, right } = processInput(input);
+<span class="hljs-comment">// best (use the functional force)</span>
+<span class="hljs-keyword">const</span> sum = numbers.reduce((total, num) =&gt; total + num, <span class="hljs-number">0</span>);
+sum === <span class="hljs-number">15</span>;
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; TCL 2016 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2016-04-28 18:04:55
+2016-05-03 15:09:46
 </span></footer>
                     
                     </section>
@@ -622,10 +586,10 @@
         </div>
 
         
-        <a href="../es6/iterator.html" class="navigation navigation-prev " aria-label="Previous page: 迭代器"><i class="fa fa-angle-left"></i></a>
+        <a href="../es6/module.html" class="navigation navigation-prev " aria-label="Previous page: 模块"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../misc.html" class="navigation navigation-next " aria-label="Next page: 其他"><i class="fa fa-angle-right"></i></a>
+        <a href="../es6/destruct.html" class="navigation navigation-next " aria-label="Next page: 解构"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
